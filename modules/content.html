@@ -1,20 +1,47 @@
 <table class="hero" style="background: #ffffff; width: 100%; max-width: 600px; padding: 30px 50px;" cellspacing="0">
     <tbody>
+        {% if module.image_field.src %}
+            <tr>
+                <td style="padding: 0 0 28px;">
+                    {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+                    {% if module.image_field.size_type == 'auto' %}
+                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                    {% elif module.image_field.size_type == 'auto_custom_max' %}
+                        {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                    {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+                    <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                </td>
+            </tr>
+        {% endif %}
+        {% if module.heading or module.text %}
         <tr>
             <td style="padding: 0 0 28px;">
-                <img src="./assets/image 2.png">
+                {% if module.heading %}
+                    <p class="headline" style="font-family: Arial; font-size: 24px; font-style: normal; font-weight: 700; line-height: 28px; letter-spacing: -0.1531914919614792px; text-align: center;">{{ module.heading }}</p>
+                {% endif %}
+                {% if module.text %}
+                    <p style="font-family: Arial; font-size: 16px; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -0.09574468433856964px; text-align: center;">{{ module.text }}</p>
+                {% endif %}
             </td>
         </tr>
-        <tr>
-            <td style="padding: 0 0 28px;">
-                <p class="headline" style="font-family: Arial; font-size: 24px; font-style: normal; font-weight: 700; line-height: 28px; letter-spacing: -0.1531914919614792px; text-align: center;">Email headline and intro running to 500px</p>
-                <p style="font-family: Arial; font-size: 16px; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -0.09574468433856964px; text-align: center;">WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding: 0;" align="center">
-                <a href="#" class="cta" style="font-family: Arial; font-size: 16px; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; color: #ffffff; text-decoration: none; padding: 12px 57px; display: inline-block;">Button</a>
-            </td>
-        </tr>
+        {% endif %}
+        {% if module.cta.cta_link and module.cta.cta_text %}
+            <tr>
+                <td style="padding: 0;" align="center">
+                    {% set href = module.cta.cta_link.url.href %}
+                    {% if module.cta.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a href="{{ href }}"
+                        {% if module.cta.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+                        {% if module.cta.cta_link.rel %}rel="{{ module.cta.cta_link.rel }}"{% endif %}
+                        class="cta"
+                        style="font-family: Arial; font-size: 16px; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; color: #ffffff; text-decoration: none; padding: 12px 57px; display: inline-block;">
+                        {{ module.cta.cta_text }}
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
     </tbody>
 </table>
