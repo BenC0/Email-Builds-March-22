@@ -3,7 +3,7 @@ This is the HTML, CSS, & HUBL required for the GlobalLogic email builds (March 2
 
 ## TODO
 1. Buisness Comms
-   1. Email Template in Hubspot
+   1. Style options required for modules.
    2. Review/QA
 2. HR & DI
 3. Business Comms light (with dark mode)
