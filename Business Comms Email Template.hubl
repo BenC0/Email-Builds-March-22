@@ -10,6 +10,10 @@
     <style type="text/css" id="hs-inline-css">
       /*<![CDATA[*/
       /* everything in this style tag will be inlined onto matching elements */
+      body {
+        max-width: 600px;
+        margin: 0 auto;
+      }
       /*]]>*/
     </style>
   </head>
@@ -18,7 +22,7 @@
     <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
     <!-- View as webpage link -->
     {% if content.create_page %}
-    <div>
+    <div style="font-family: Arial; font-size: 16px; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -0.09574468433856964px; text-align: center;">
       Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
     </div>
     {% endif %}
