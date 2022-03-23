@@ -341,7 +341,7 @@
       }
     %}
     <!-- Office location information and unsubscribe links -->
-    <p id="footer" style="display: none !important";>
+    <p id="footer" style="display: none !important;">
       {{ site_settings.company_name }}&nbsp;
       {{ site_settings.company_street_address_1 }}&nbsp;
       {{ site_settings.company_street_address_2 }}&nbsp;
