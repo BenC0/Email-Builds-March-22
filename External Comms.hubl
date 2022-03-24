@@ -96,6 +96,10 @@
         path="/Global Logic - Emails - March 2022/modules/external-call-out-box"
         label="external-call-out-box"
     %}
+    {% module "cta-banner"
+        path="/Global Logic - Emails - March 2022/modules/cta-banner"
+        label="cta-banner"
+    %}
     <!-- Office location information and unsubscribe links -->
     <p id="footer">
       {{ site_settings.company_name }}&nbsp;
