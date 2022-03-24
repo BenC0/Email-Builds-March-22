@@ -133,7 +133,49 @@
     {% module "hero"
       path="/Global Logic - Emails - March 2022/modules/hero"
       label="hero"
-      hero_text='Email headline and intro running to 500px lorem ipsum dolor.<br /><img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/image 2.png">'
+      background_color = { color: "#ffffff" }
+      text = {
+        hero_text: 'Email headline and intro running to 500px lorem ipsum dolor. <br /> <br /> <img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/image 2.png">',
+        text_color: { color: "#000000" }
+      }
+      icons = {
+        top_left_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Vector.png",
+          alt: "",
+          max_width: "22",
+          max_height: "22",
+          width: "22",
+          height: "22",
+          size_type: 'auto_custom_max',
+        },
+        top_right_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Vector-1.png",
+          alt: "",
+          max_width: "22",
+          max_height: "22",
+          width: "22",
+          height: "22",
+          size_type: 'auto_custom_max',
+        },
+        bottom_left_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Vector-2.png",
+          alt: "",
+          max_width: "22",
+          max_height: "22",
+          width: "22",
+          height: "22",
+          size_type: 'auto_custom_max',
+        },
+        bottom_right_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Vector-3.png",
+          alt: "",
+          max_width: "22",
+          max_height: "22",
+          width: "22",
+          height: "22",
+          size_type: 'auto_custom_max',
+        }
+      }
     %}
     {% module "content1"
       path="/Global Logic - Emails - March 2022/modules/content"
