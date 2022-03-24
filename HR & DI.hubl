@@ -178,16 +178,16 @@
         size_type: 'auto_custom_max',
       }
       cta= {
+        cta_alignment:"left",
         cta_link: {
           url: {
             href: "https://example.test",
             type: "EXTERNAL",
             open_in_new_tab: true,
           },
-          cta_text:"Button"
-        }
+          cta_text:"Button",
+        },
       }
-      cta_alignment="left"
     %}
     {% module "footer-with-decoration"
       path="/Global Logic - Emails - March 2022/modules/footer-with-decoration" 
