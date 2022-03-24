@@ -180,6 +180,7 @@
     {% module "content1"
       path="/Global Logic - Emails - March 2022/modules/content"
       label="content1"
+      text_alignment = "left"
       style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
       cta = { cta_link: "", cta_text: "" }
       heading="Email headline and intro running to 500px"
@@ -188,6 +189,7 @@
     {% module "content2"
       path="/Global Logic - Emails - March 2022/modules/content"
       label="content2"
+      text_alignment = "left"
       style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
       cta = { cta_link: "", cta_text: "" }
       heading="Email headline and intro running to 500px"
@@ -219,6 +221,7 @@
         height: "200",
         size_type: 'auto_custom_max',
       }
+      text_alignment = "left"
       cta= {
         cta_alignment:"left",
         cta_link: {
