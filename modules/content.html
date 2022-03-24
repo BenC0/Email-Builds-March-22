@@ -1,8 +1,8 @@
-<table class="hero" style="background: #ffffff; width: 100%; max-width: 600px; padding: 30px 50px;" cellspacing="0">
+<table class="hero" style="background: #ffffff; width: 100%; max-width: 600px; {{ module.style.outer_spacing.css }}" cellspacing="0">
     <tbody>
         {% if module.image_field.src %}
             <tr>
-                <td style="padding: 0 0 28px;">
+                <td style="padding: 0 0 5px;">
                     {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
                     {% if module.image_field.size_type == 'auto' %}
                         {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
@@ -16,7 +16,7 @@
         {% endif %}
         {% if module.heading or module.text %}
         <tr>
-            <td style="padding: 0 0 28px;">
+            <td style="padding: 0 0 5px;">
                 {% if module.heading %}
                     <p class="headline" style="font-family: Arial; font-size: 24px; font-style: normal; font-weight: 700; line-height: 28px; letter-spacing: -0.1531914919614792px; text-align: center;">{{ module.heading }}</p>
                 {% endif %}
