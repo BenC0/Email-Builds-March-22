@@ -7,14 +7,23 @@
   <head>
     <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
     {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <style type="text/css" id="hs-inline-css">
-      /*<![CDATA[*/
-      /* everything in this style tag will be inlined onto matching elements */
-      body {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      /*]]>*/
+        /*<![CDATA[*/
+        /* everything in this style tag will be inlined onto matching elements */
+        @media (prefers-color-scheme: dark ) {
+            table.content {
+                background: #000000;
+            }
+            table.content .headline {
+                color: #F37037;
+            }    
+            table.content p {
+                color: #ffffff;
+            }
+        }
+        /*]]>*/
     </style>
   </head>
   <body>
@@ -28,99 +37,99 @@
     {% endif %}
     <!-- Insert body here -->
     {% module "navigation-with-social-links"
-      path="/Global Logic - Emails - March 2022/modules/navigation-with-social-links"
-      label="navigation"
-      social_1 =  {
+        path="/Global Logic - Emails - March 2022/modules/navigation-with-social-links"
+        label="navigation"
+        social_1 =  {
         social_link: {
-          url: {
+            url: {
             href: "https://linkedin.com/",
             type: "EXTERNAL",
             open_in_new_tab: true,
-          }
+            }
         },
         social_icon: {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/linkedin-icon.png",
-          alt: "LinkedIn",
-          max_width: "35",
-          max_height: "34",
-          width: "35",
-          height: "34",
-          size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/linkedin-icon.png",
+            alt: "LinkedIn",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
         }
-      }
-      social_2 =  {
+        }
+        social_2 =  {
         social_link: {
-          url: {
+            url: {
             href: "https://facebook.com/",
             type: "EXTERNAL",
             open_in_new_tab: true,
-          }
+            }
         },
         social_icon: {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/facebook-icon.png",
-          alt: "facebook",
-          max_width: "35",
-          max_height: "34",
-          width: "35",
-          height: "34",
-          size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/facebook-icon.png",
+            alt: "facebook",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
         }
-      }
-      social_3 =  {
+        }
+        social_3 =  {
         social_link: {
-          url: {
+            url: {
             href: "https://twitter.com/",
             type: "EXTERNAL",
             open_in_new_tab: true,
-          }
+            }
         },
         social_icon: {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/twitter-icon.png",
-          alt: "twitter",
-          max_width: "35",
-          max_height: "34",
-          width: "35",
-          height: "34",
-          size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/twitter-icon.png",
+            alt: "twitter",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
         }
-      }
-      social_4 =  {
+        }
+        social_4 =  {
         social_link: {
-          url: {
+            url: {
             href: "https://youtube.com/",
             type: "EXTERNAL",
             open_in_new_tab: true,
-          }
+            }
         },
         social_icon: {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/youtube-icon.png",
-          alt: "youtube",
-          max_width: "35",
-          max_height: "34",
-          width: "35",
-          height: "34",
-          size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/youtube-icon.png",
+            alt: "youtube",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
         }
-      }
-      social_5 =  {
+        }
+        social_5 =  {
         social_link: {
-          url: {
+            url: {
             href: "https://instagram.com/",
             type: "EXTERNAL",
             open_in_new_tab: true,
-          }
+            }
         },
         social_icon: {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/instagram-icon.png",
-          alt: "instagram",
-          max_width: "35",
-          max_height: "34",
-          width: "35",
-          height: "34",
-          size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/instagram-icon.png",
+            alt: "instagram",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
         }
-      }
-      logo = {
+        }
+        logo = {
         src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/GlobalLogic_Logo.png",
         alt: "GlobalLogic - A Hitachi Group Company",
         max_width: "200",
@@ -128,98 +137,33 @@
         width: "200",
         height: "47",
         size_type: 'auto_custom_max',
-      }
-    %}
-    {% module "hero"
-      path="/Global Logic - Emails - March 2022/modules/hero"
-      label="hero"
-      hero_text="Email headline and intro running to 500px lorem ipsum dolor."
+        }
     %}
     {% module "content1"
-      path="/Global Logic - Emails - March 2022/modules/content"
-      label="content1"
-      style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
-      cta= {
-        cta_link: {
-          url: {
-            href: "https://example.test",
-            type: "EXTERNAL",
-            open_in_new_tab: true,
-          },
-          cta_text:"Button"
+        path="/Global Logic - Emails - March 2022/modules/content"
+        label="content1"
+        style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
+        text_alignment = "left"
+        cta= {
+            cta_link: {
+                url: {
+                    href: "",
+                    type: "EXTERNAL",
+                    open_in_new_tab: true,
+                }
+            },
+            cta_text: ""
         }
-      }
-      heading="Email headline and intro running to 500px"
-      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        heading='<span style="font-size: 32px;">Email headline and intro running to 500px</span>'
+        text='WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /><br /> WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /><br /> WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br /><br />'
     %}
-    {% module "content2"
-      path="/Global Logic - Emails - March 2022/modules/content"
-      label="content2"
-      style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
-      cta = { cta_link: "", cta_text: "" }
-      heading="Email headline and intro running to 500px"
-      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    {% module "quote-box"
+      path="/Global Logic - Emails - March 2022/modules/quote-box" 
+      label="quote-box"
     %}
-    {% module "call-out-box"
-      path="/Global Logic - Emails - March 2022/modules/call-out-box"
-      label="call-out-box"
-      heading="Callout panel for interesting info lorem ipsum dolor."
-      text="Leo nascetur mi volutpat natoque netus nibh ut libero praesent aenean lobortis vitae consequat consequat hac. At suspendisse parturient id ullamcorper purus varius parturient vestibulum odio adipiscing sem."
-    %}
-    {% module "content3"
-      path="/Global Logic - Emails - March 2022/modules/content"
-      label="content3"
-      heading="Email headline and intro running to 500px"
-      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      styles = {
-        "padding_top":"34px"
-      }
-      image_field = {
-        src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/image 2.png",
-        alt: "Alt text for image.",
-        max_width: "500",
-        max_height: "200",
-        width: "500",
-        height: "200",
-        size_type: 'auto_custom_max',
-      }
-      cta = { cta_link: "", cta_text: "" }
-    %}
-    {% module "content4"
-      path="/Global Logic - Emails - March 2022/modules/content"
-      style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
-      label="content4"
-      heading="Email headline and intro running to 500px"
-      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      cta = { cta_link: "", cta_text: "" }
-    %}
-    {% module "content5"
-      path="/Global Logic - Emails - March 2022/modules/content"
-      label="content5"
-      style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
-      image_field = {
-        src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Mask Group.png",
-        alt: "Alt text for image.",
-        max_width: "500",
-        max_height: "200",
-        width: "500",
-        height: "200",
-        size_type: 'auto_custom_max',
-      }
-      cta= {
-        cta_link: {
-          url: {
-            href: "https://example.test",
-            type: "EXTERNAL",
-            open_in_new_tab: true,
-          },
-          cta_text:"Button"
-        }
-      }
-    %}
-    <table height="28"> <tbody> <tr> <td> </td> </tr> </tbody> </table>
     {% module "footer-with-decoration"
       path="/Global Logic - Emails - March 2022/modules/footer-with-decoration" 
+      footer_decoration="false"
       label="footer-with-decoration"
       social_links = {
         social_1:  {
@@ -349,7 +293,7 @@
       }
     %}
     <!-- Office location information and unsubscribe links -->
-    <p id="footer" style="display: none !important;">
+    <p id="footer">
       {{ site_settings.company_name }}&nbsp;
       {{ site_settings.company_street_address_1 }}&nbsp;
       {{ site_settings.company_street_address_2 }}&nbsp;

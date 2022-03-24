@@ -234,6 +234,11 @@
         },
       }
     %}
+    <table height="28"> <tbody> <tr> <td> </td> </tr> </tbody> </table>
+    {% module "quote-box"
+      path="/Global Logic - Emails - March 2022/modules/quote-box" 
+      label="quote-box"
+    %}
     {% module "footer-with-decoration"
       path="/Global Logic - Emails - March 2022/modules/footer-with-decoration" 
       footer_decoration="false"

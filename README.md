@@ -7,5 +7,6 @@ This is the HTML, CSS, & HUBL required for the GlobalLogic email builds (March 2
 2. HR & DI
    1. Review/QA
 3. Business Comms light (with dark mode)
+   1. Review/QA
 4. External Comms
 5. External Comms #2
