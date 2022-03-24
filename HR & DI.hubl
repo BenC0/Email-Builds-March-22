@@ -1,0 +1,338 @@
+<!--
+    templateType: email
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
+    {% if content.meta_description %}<meta name="description" content="{{ content.meta_description }}"/>{% endif %}
+    <style type="text/css" id="hs-inline-css">
+      /*<![CDATA[*/
+      /* everything in this style tag will be inlined onto matching elements */
+      body {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      /*]]>*/
+    </style>
+  </head>
+  <body>
+    <!-- Preview text (text which appears right after subject in certain email clients) -->
+    <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
+    <!-- View as webpage link -->
+    {% if content.create_page %}
+    <div style="font-family: Arial; font-size: 16px; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -0.09574468433856964px; text-align: center; display: none !important;">
+      Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
+    </div>
+    {% endif %}
+    <!-- Insert body here -->
+    {% module "navigation-with-social-links"
+      path="/Global Logic - Emails - March 2022/modules/navigation-with-social-links"
+      label="navigation"
+      social_1 =  {
+        social_link: {
+          url: {
+            href: "https://linkedin.com/",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          }
+        },
+        social_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/linkedin-icon.png",
+          alt: "LinkedIn",
+          max_width: "35",
+          max_height: "34",
+          width: "35",
+          height: "34",
+          size_type: 'auto_custom_max',
+        }
+      }
+      social_2 =  {
+        social_link: {
+          url: {
+            href: "https://facebook.com/",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          }
+        },
+        social_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/facebook-icon.png",
+          alt: "facebook",
+          max_width: "35",
+          max_height: "34",
+          width: "35",
+          height: "34",
+          size_type: 'auto_custom_max',
+        }
+      }
+      social_3 =  {
+        social_link: {
+          url: {
+            href: "https://twitter.com/",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          }
+        },
+        social_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/twitter-icon.png",
+          alt: "twitter",
+          max_width: "35",
+          max_height: "34",
+          width: "35",
+          height: "34",
+          size_type: 'auto_custom_max',
+        }
+      }
+      social_4 =  {
+        social_link: {
+          url: {
+            href: "https://youtube.com/",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          }
+        },
+        social_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/youtube-icon.png",
+          alt: "youtube",
+          max_width: "35",
+          max_height: "34",
+          width: "35",
+          height: "34",
+          size_type: 'auto_custom_max',
+        }
+      }
+      social_5 =  {
+        social_link: {
+          url: {
+            href: "https://instagram.com/",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          }
+        },
+        social_icon: {
+          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/instagram-icon.png",
+          alt: "instagram",
+          max_width: "35",
+          max_height: "34",
+          width: "35",
+          height: "34",
+          size_type: 'auto_custom_max',
+        }
+      }
+      logo = {
+        src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/GlobalLogic_Logo.png",
+        alt: "GlobalLogic - A Hitachi Group Company",
+        max_width: "200",
+        max_height: "47",
+        width: "200",
+        height: "47",
+        size_type: 'auto_custom_max',
+      }
+    %}
+    {% module "hero"
+      path="/Global Logic - Emails - March 2022/modules/hero"
+      label="hero"
+      hero_text='Email headline and intro running to 500px lorem ipsum dolor.<br /><img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/image 2.png">'
+    %}
+    {% module "content1"
+      path="/Global Logic - Emails - March 2022/modules/content"
+      label="content1"
+      style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
+      cta = { cta_link: "", cta_text: "" }
+      heading="Email headline and intro running to 500px"
+      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    %}
+    {% module "content2"
+      path="/Global Logic - Emails - March 2022/modules/content"
+      label="content2"
+      style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
+      cta = { cta_link: "", cta_text: "" }
+      heading="Email headline and intro running to 500px"
+      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      image_field = {
+        src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/image 2.png",
+        alt: "Alt text for image.",
+        max_width: "500",
+        max_height: "200",
+        width: "500",
+        height: "200",
+        size_type: 'auto_custom_max',
+      }
+    %}
+    {% module "content3"
+      path="/Global Logic - Emails - March 2022/modules/content"
+      label="content3"
+      heading="Email headline and intro running to 500px"
+      text="WYSIWIG body copy that can be edited by the user and runs over a few lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      styles = {
+        "padding_top":"34px"
+      }
+      image_field = {
+        src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Mask Group.png",
+        alt: "Alt text for image.",
+        max_width: "500",
+        max_height: "200",
+        width: "500",
+        height: "200",
+        size_type: 'auto_custom_max',
+      }
+      cta= {
+        cta_link: {
+          url: {
+            href: "https://example.test",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          },
+          cta_text:"Button"
+        }
+      }
+    %}
+    {% module "footer-with-decoration"
+      path="/Global Logic - Emails - March 2022/modules/footer-with-decoration" 
+      label="footer-with-decoration"
+      social_links = {
+        social_1:  {
+          social_link: {
+            url: {
+              href: "https://linkedin.com/",
+              type: "EXTERNAL",
+              open_in_new_tab: true,
+            }
+          },
+          social_icon: {
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/linkedin-icon.png",
+            alt: "LinkedIn",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
+          }
+        },
+        social_2:  {
+          social_link: {
+            url: {
+              href: "https://facebook.com/",
+              type: "EXTERNAL",
+              open_in_new_tab: true,
+            }
+          },
+          social_icon: {
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/facebook-icon.png",
+            alt: "facebook",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
+          }
+        },
+        social_3:  {
+          social_link: {
+            url: {
+              href: "https://twitter.com/",
+              type: "EXTERNAL",
+              open_in_new_tab: true,
+            }
+          },
+          social_icon: {
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/twitter-icon.png",
+            alt: "twitter",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
+          }
+        },
+        social_4:  {
+          social_link: {
+            url: {
+              href: "https://youtube.com/",
+              type: "EXTERNAL",
+              open_in_new_tab: true,
+            }
+          },
+          social_icon: {
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/youtube-icon.png",
+            alt: "youtube",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
+          }
+        },
+        social_5:  {
+          social_link: {
+            url: {
+              href: "https://instagram.com/",
+              type: "EXTERNAL",
+              open_in_new_tab: true,
+            }
+          },
+          social_icon: {
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/instagram-icon.png",
+            alt: "instagram",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
+          }
+        }
+      }
+      footer_links = {
+        footer_link_1: {
+          footer_link_url: {
+            href: "https://example.test",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          },
+          link_text:"Contact"
+        },
+        footer_link_2: {
+          footer_link_url: {
+            href: "https://example.test",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          },
+          link_text:"Careers"
+        },
+        footer_link_3: {
+          footer_link_url: {
+            href: "https://example.test",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          },
+          link_text:"Privacy"
+        },
+        footer_link_4: {
+          footer_link_url: {
+            href: "https://example.test",
+            type: "EXTERNAL",
+            open_in_new_tab: true,
+          },
+          link_text:"Feedback or thoughts? Let us know what you want to see more of here."
+        },
+      }
+    %}
+    <!-- Office location information and unsubscribe links -->
+    <p id="footer" style="display: none !important;">
+      {{ site_settings.company_name }}&nbsp;
+      {{ site_settings.company_street_address_1 }}&nbsp;
+      {{ site_settings.company_street_address_2 }}&nbsp;
+      {{ site_settings.company_city }}&nbsp;
+      {{ site_settings.company_state }}&nbsp;
+      {{ site_settings.company_zip }}&nbsp;
+      {{ site_settings.company_country }}&nbsp;
+      <br/>
+      You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+      <br/>
+      Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+      <br/>
+      <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
+    </p>
+  </body>
+</html>
