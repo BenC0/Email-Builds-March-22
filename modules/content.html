@@ -28,7 +28,7 @@
         {% endif %}
         {% if module.cta.cta_link and module.cta.cta_text %}
             <tr>
-                <td style="padding: 0;" align="center">
+                <td style="padding: 0;" align="{{ module.cta_alignment }}">
                     {% set href = module.cta.cta_link.url.href %}
                     {% if module.cta.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
                         {% set href = "mailto:" + href %}

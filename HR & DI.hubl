@@ -187,9 +187,11 @@
           cta_text:"Button"
         }
       }
+      cta_alignment="left"
     %}
     {% module "footer-with-decoration"
       path="/Global Logic - Emails - March 2022/modules/footer-with-decoration" 
+      footer_decoration="false"
       label="footer-with-decoration"
       social_links = {
         social_1:  {
