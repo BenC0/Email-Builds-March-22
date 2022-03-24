@@ -1,0 +1,14 @@
+<table class="headline" style="width: 100%; max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="middle" align="left" style="padding: 47px 40px 41px;{% if module.style1 %} background: #000000; {% endif %}">
+                <p class="headline">{{ module.text }}</p>
+            </td>
+        </tr>
+        {% if module.style1 %}
+            <tr>
+                <td valign="middle" align="left" height="23" style="background: #F37037;"> </td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
