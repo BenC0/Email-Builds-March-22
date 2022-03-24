@@ -1,0 +1,161 @@
+<table class="footer" style="background: #F37037; width: 100%; max-width: 600px; padding: 30px 40px;" cellspacing="0">
+    <tbody>
+        <tr>
+            <td style="border-bottom: 1px solid #ffffff;">
+                <p style="font-family: Helvetica Neue LT Pro; font-size: 16px; font-style: normal; font-weight: 700; line-height: 22px; letter-spacing: 0em; text-align: center;color: #ffffff;">Follow us:</p>
+                <table align="center" cellspacing="8">
+                    <tbody>
+                        <tr>
+                            {% if module.social_links.social_1.social_link.url.href and module.social_links.social_1.social_icon %}
+                                <td valign="middle">
+                                    {% set href = module.social_links.social_1.social_link.url.href %}
+                                    {% if module.social_links.social_1.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                    {% endif %}
+                                    <a href="{{ href }}"
+                                        {% if module.social_links.social_1.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if module.social_links.social_1.social_link.rel %}rel="{{ module.social_links.social_1.social_link.rel }}"{% endif %}
+                                    >
+                                        {% set sizeAttrs = 'width="{{ module.social_links.social_1.social_icon.width }}" height="{{ module.social_links.social_1.social_icon.height }}"' %}
+                                        {% if module.social_links.social_1.social_icon.size_type == 'auto' %}
+                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                        {% elif module.social_links.social_1.social_icon.size_type == 'auto_custom_max' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_links.social_1.social_icon.max_width }}" height="{{ module.social_links.social_1.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                        {% endif %}
+                                        <img src="{{ module.social_links.social_1.social_icon.src }}" alt="{{ module.social_links.social_1.social_icon.alt }}" {{ sizeAttrs }}>
+                                    </a>
+                                </td>
+                            {% endif %}
+                            {% if module.social_links.social_2.social_link.url.href and module.social_links.social_2.social_icon %}
+                                <td valign="middle">
+                                    {% set href = module.social_links.social_2.social_link.url.href %}
+                                    {% if module.social_links.social_2.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                    {% endif %}
+                                    <a href="{{ href }}"
+                                        {% if module.social_links.social_2.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if module.social_links.social_2.social_link.rel %}rel="{{ module.social_links.social_2.social_link.rel }}"{% endif %}
+                                    >
+                                        {% set sizeAttrs = 'width="{{ module.social_links.social_2.social_icon.width }}" height="{{ module.social_links.social_2.social_icon.height }}"' %}
+                                        {% if module.social_links.social_2.social_icon.size_type == 'auto' %}
+                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                        {% elif module.social_links.social_2.social_icon.size_type == 'auto_custom_max' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_links.social_2.social_icon.max_width }}" height="{{ module.social_links.social_2.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                        {% endif %}
+                                        <img src="{{ module.social_links.social_2.social_icon.src }}" alt="{{ module.social_links.social_2.social_icon.alt }}" {{ sizeAttrs }}>
+                                    </a>
+                                </td>
+                            {% endif %}
+                            {% if module.social_links.social_3.social_link.url.href and module.social_links.social_3.social_icon %}
+                                <td valign="middle">
+                                    {% set href = module.social_links.social_3.social_link.url.href %}
+                                    {% if module.social_links.social_3.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                    {% endif %}
+                                    <a href="{{ href }}"
+                                        {% if module.social_links.social_3.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if module.social_links.social_3.social_link.rel %}rel="{{ module.social_links.social_3.social_link.rel }}"{% endif %}
+                                    >
+                                        {% set sizeAttrs = 'width="{{ module.social_links.social_3.social_icon.width }}" height="{{ module.social_links.social_3.social_icon.height }}"' %}
+                                        {% if module.social_links.social_3.social_icon.size_type == 'auto' %}
+                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                        {% elif module.social_links.social_3.social_icon.size_type == 'auto_custom_max' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_links.social_3.social_icon.max_width }}" height="{{ module.social_links.social_3.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                        {% endif %}
+                                        <img src="{{ module.social_links.social_3.social_icon.src }}" alt="{{ module.social_links.social_3.social_icon.alt }}" {{ sizeAttrs }}>
+                                    </a>
+                                </td>
+                            {% endif %}
+                            {% if module.social_links.social_4.social_link.url.href and module.social_links.social_4.social_icon %}
+                                <td valign="middle">
+                                    {% set href = module.social_links.social_4.social_link.url.href %}
+                                    {% if module.social_links.social_4.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                    {% endif %}
+                                    <a href="{{ href }}"
+                                        {% if module.social_links.social_4.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if module.social_links.social_4.social_link.rel %}rel="{{ module.social_links.social_4.social_link.rel }}"{% endif %}
+                                    >
+                                        {% set sizeAttrs = 'width="{{ module.social_links.social_4.social_icon.width }}" height="{{ module.social_links.social_4.social_icon.height }}"' %}
+                                        {% if module.social_links.social_4.social_icon.size_type == 'auto' %}
+                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                        {% elif module.social_links.social_4.social_icon.size_type == 'auto_custom_max' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_links.social_4.social_icon.max_width }}" height="{{ module.social_links.social_4.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                        {% endif %}
+                                        <img src="{{ module.social_links.social_4.social_icon.src }}" alt="{{ module.social_links.social_4.social_icon.alt }}" {{ sizeAttrs }}>
+                                    </a>
+                                </td>
+                            {% endif %}
+                            {% if module.social_links.social_5.social_link.url.href and module.social_links.social_5.social_icon %}
+                                <td valign="middle">
+                                    {% set href = module.social_links.social_5.social_link.url.href %}
+                                    {% if module.social_links.social_5.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                    {% endif %}
+                                    <a href="{{ href }}"
+                                        {% if module.social_links.social_5.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if module.social_links.social_5.social_link.rel %}rel="{{ module.social_links.social_5.social_link.rel }}"{% endif %}
+                                    >
+                                        {% set sizeAttrs = 'width="{{ module.social_links.social_5.social_icon.width }}" height="{{ module.social_links.social_5.social_icon.height }}"' %}
+                                        {% if module.social_links.social_5.social_icon.size_type == 'auto' %}
+                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                        {% elif module.social_links.social_5.social_icon.size_type == 'auto_custom_max' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_links.social_5.social_icon.max_width }}" height="{{ module.social_links.social_5.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                        {% endif %}
+                                        <img src="{{ module.social_links.social_5.social_icon.src }}" alt="{{ module.social_links.social_5.social_icon.alt }}" {{ sizeAttrs }}>
+                                    </a>
+                                </td>
+                            {% endif %}
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-family: Helvetica Neue LT Pro; font-size: 16px; font-style: normal; font-weight: 700; line-height: 22px; letter-spacing: 0em; text-align: center; color: #ffffff;">GlobalLogic</p>
+                <p style="font-family: Helvetica Neue LT Pro; font-size: 16px; font-style: normal; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: center;color: #ffffff;margin: 2px 0;">London Head Office</p>
+                <p style="font-family: Helvetica Neue LT Pro; font-size: 12px; font-style: normal; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-align: center;color: #ffffff;margin: 0;">Level 7, 2 More London Riverside, London, SE1 2AP</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                {% set href = module.link_1.link_field.url.href %}
+                {% if module.link_1.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}"
+                    {% if module.link_1.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                    {% if module.link_1.link_field.rel %}rel="{{ module.link_1.link_field.rel }}"{% endif %}
+                    style="font-family: Helvetica Neue LT Pro; font-size: 12px; font-style: normal; font-weight: 700; line-height: 22px; letter-spacing: 0em; text-align: center;color: #ffffff; text-align: center;"
+                >
+                    {{ module.link_1.text_field }}
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <a data-unsubscribe="true" href="{{ unsubscribe_link_all }}"
+                    style="font-family: Helvetica Neue LT Pro; font-size: 12px; font-style: normal; font-weight: 700; line-height: 22px; letter-spacing: 0em; text-align: center;color: #ffffff; text-align: center;"
+                >
+                    Unsubscribe
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                {% set href = module.link_2.link_field.url.href %}
+                {% if module.link_2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}"
+                    {% if module.link_2.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                    {% if module.link_2.link_field.rel %}rel="{{ module.link_2.link_field.rel }}"{% endif %}
+                    style="font-family: Helvetica Neue LT Pro; font-size: 12px; font-style: normal; font-weight: 700; line-height: 22px; letter-spacing: 0em; text-align: center;color: #ffffff; text-align: center;"
+                >
+                    {{ module.link_2.text_field }}
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
