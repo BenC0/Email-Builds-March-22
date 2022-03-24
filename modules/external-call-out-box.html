@@ -4,16 +4,16 @@
             <td style="padding: 0; line-height: 0;" height="47" width="47" >
                 <img height="47" width="47" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/Vector(9).png">
             </td>
-            <td  style="padding: 0;width: 30px;" width="30"></td>
+            <td></td>
         </tr>
         <tr>
             <td></td>
             <td>
                 {% if module.text %}
-                    <p style=" font-family: Helvetica Neue LT Pro, sans-serif; font-size: 24px; font-style: normal; font-weight: 400; line-height: 29px; letter-spacing: 0em; text-align: left; color: #ffffff;">{{ module.text }}</p>
+                    <p style="margin: 0; font-family: Helvetica Neue LT Pro, sans-serif; font-size: 24px; font-style: normal; font-weight: 400; line-height: 29px; letter-spacing: 0em; text-align: left; color: #ffffff;">{{ module.text }}</p>
                 {% endif %}
-                {% if module.name %}
-                    <p style="font-family: Helvetica Neue LT Pro, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: #ffffff;">{{ module.name }}</p>
+                {% if module.person_name %}
+                    <p style="font-family: Helvetica Neue LT Pro, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: #ffffff;">{{ module.person_name }}</p>
                 {% endif %}
             </td>
         </tr>

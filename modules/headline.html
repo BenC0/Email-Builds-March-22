@@ -1,11 +1,11 @@
-<table class="headline" style="width: 100%; max-width: 600px;">
+<table class="headline" style="width: 100%; max-width: 600px;" cellspacing="0">
     <tbody>
         <tr>
-            <td valign="middle" align="left" style="padding: 47px 40px 41px;{% if module.style1 %} background: #000000; {% endif %}">
-                <p class="headline">{{ module.text }}</p>
+            <td valign="middle" align="left" style="padding: 47px 40px 41px;{% if module.style == "style1" %} background: #000000; {% endif %}">
+                <p class="headline" style="margin: 0 auto; font-family: Helvetica Neue LT Pro; font-size: 24px; font-style: normal; font-weight: 400; line-height: 29px; letter-spacing: 0em; text-align: left; {% if module.style == "style1" %} color: #ffffff; {% endif %}">{{ module.text }}</p>
             </td>
         </tr>
-        {% if module.style1 %}
+        {% if module.style == "style1" %}
             <tr>
                 <td valign="middle" align="left" height="23" style="background: #F37037;"> </td>
             </tr>
