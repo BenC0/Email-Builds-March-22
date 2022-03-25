@@ -38,10 +38,12 @@
     {% module "navigation"
         path="/Global Logic - Emails - March 2022/modules/navigation"
         label="navigation"
+        decoration=true
     %}
     {% module "headline"
         path="/Global Logic - Emails - March 2022/modules/headline"
         label="headline"
+        style="style2"
     %}
     {% module "content1"
         path="/Global Logic - Emails - March 2022/modules/content"
