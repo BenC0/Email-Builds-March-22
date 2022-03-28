@@ -327,7 +327,7 @@
       footer_links = {
         footer_link_1: {
           footer_link_url: {
-            href: "https://example.test",
+            href: "https://www.globallogic.com/uk/contact/",
             type: "EXTERNAL",
             open_in_new_tab: true,
           },
@@ -335,7 +335,7 @@
         },
         footer_link_2: {
           footer_link_url: {
-            href: "https://example.test",
+            href: "https://www.globallogic.com/uk/careers/",
             type: "EXTERNAL",
             open_in_new_tab: true,
           },
@@ -343,7 +343,7 @@
         },
         footer_link_3: {
           footer_link_url: {
-            href: "https://example.test",
+            href: "https://www.globallogic.com/uk/privacy/",
             type: "EXTERNAL",
             open_in_new_tab: true,
           },
@@ -351,7 +351,7 @@
         },
         footer_link_4: {
           footer_link_url: {
-            href: "https://example.test",
+            href: "https://www.globallogic.com/uk/contact/",
             type: "EXTERNAL",
             open_in_new_tab: true,
           },
