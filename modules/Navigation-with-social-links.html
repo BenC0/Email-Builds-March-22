@@ -1,24 +1,31 @@
-<table class="navigation" style="background: #000000; width: 100%; max-width: 600px; padding: 11.25px 20px;">
+<table class="navigation" cellspacing="0" style="background: #000000; width: 100%; max-width: 600px; padding: 11.25px 20px;">
     <tbody>
+        <!--[if (mso)|(mso 16)]>
+            <tr>
+                <td height="2px"></td>
+                <td height="2px"></td>
+            </tr>
+        <![endif]-->
         <tr>
-            <td class="logo_container" valign="middle">
-                {% if module.logo.src %}
-                    {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}"' %}
-                    {% if module.logo.size_type == 'auto' %}
-                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
-                    {% elif module.logo.size_type == 'auto_custom_max' %}
-                        {% set sizeAttrs = 'width="{{ module.logo.max_width }}" height="{{ module.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
-                    {% endif %}
-                    {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading="{{ module.logo.loading }}"' : '' %}
-                    <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% if module.logo.src %}
+                {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}"' %}
+                {% if module.logo.size_type == 'auto' %}
+                    {% set sizeAttrs = 'style="display: block; max-width: 100%; height: auto;"' %}
+                {% elif module.logo.size_type == 'auto_custom_max' %}
+                    {% set sizeAttrs = 'width="{{ module.logo.max_width }}" height="{{ module.logo.max_height }}" style="display: block; max-width: 100%; height: auto;"' %}
                 {% endif %}
-            </td>
-            <td class="social-links" valign="middle">
-                <table align="right" cellspacing="8">
+                {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading="{{ module.logo.loading }}"' : '' %}
+
+                <td class="logo_container" {{ sizeAttrs }} valign="middle" cellspacing="0" style="display: block; background: #000000; margin: 0; padding-top: 0; padding-bottom: 0;">
+                    <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                </td>
+            {% endif %}
+            <td class="social-links" valign="middle" cellspacing="0" style="background: #000000; padding-top: 0; padding-bottom: 0;">
+                <table align="right" cellspacing="0" height="47px" style="background: #000000; margin: 0; padding-top: 0; padding-bottom: 0;">
                     <tbody>
                         <tr>
                             {% if module.social_1.social_link.url.href and module.social_1.social_icon %}
-                                <td valign="middle">
+                                <td valign="middle" style="padding: 0 4px; background: #000000; margin: 0;">
                                     {% set href = module.social_1.social_link.url.href %}
                                     {% if module.social_1.social_link.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -29,16 +36,16 @@
                                     >
                                         {% set sizeAttrs = 'width="{{ module.social_1.social_icon.width }}" height="{{ module.social_1.social_icon.height }}"' %}
                                         {% if module.social_1.social_icon.size_type == 'auto' %}
-                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'style="display: block; max-width: 100%; height: auto;"' %}
                                         {% elif module.social_1.social_icon.size_type == 'auto_custom_max' %}
-                                            {% set sizeAttrs = 'width="{{ module.social_1.social_icon.max_width }}" height="{{ module.social_1.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_1.social_icon.max_width }}" height="{{ module.social_1.social_icon.max_height }}" style="display: block; max-width: 100%; height: auto;"' %}
                                         {% endif %}
                                         <img src="{{ module.social_1.social_icon.src }}" alt="{{ module.social_1.social_icon.alt }}" {{ sizeAttrs }}>
                                     </a>
                                 </td>
                             {% endif %}
                             {% if module.social_2.social_link.url.href and module.social_2.social_icon %}
-                                <td valign="middle">
+                                <td valign="middle" style="padding: 0 4px; background: #000000; margin: 0;">
                                     {% set href = module.social_2.social_link.url.href %}
                                     {% if module.social_2.social_link.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -49,16 +56,16 @@
                                     >
                                         {% set sizeAttrs = 'width="{{ module.social_2.social_icon.width }}" height="{{ module.social_2.social_icon.height }}"' %}
                                         {% if module.social_2.social_icon.size_type == 'auto' %}
-                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'style="display: block; max-width: 100%; height: auto;"' %}
                                         {% elif module.social_2.social_icon.size_type == 'auto_custom_max' %}
-                                            {% set sizeAttrs = 'width="{{ module.social_2.social_icon.max_width }}" height="{{ module.social_2.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_2.social_icon.max_width }}" height="{{ module.social_2.social_icon.max_height }}" style="display: block; max-width: 100%; height: auto;"' %}
                                         {% endif %}
                                         <img src="{{ module.social_2.social_icon.src }}" alt="{{ module.social_2.social_icon.alt }}" {{ sizeAttrs }}>
                                     </a>
                                 </td>
                             {% endif %}
                             {% if module.social_3.social_link.url.href and module.social_3.social_icon %}
-                                <td valign="middle">
+                                <td valign="middle" style="padding: 0 4px; background: #000000; margin: 0;">
                                     {% set href = module.social_3.social_link.url.href %}
                                     {% if module.social_3.social_link.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -69,16 +76,16 @@
                                     >
                                         {% set sizeAttrs = 'width="{{ module.social_3.social_icon.width }}" height="{{ module.social_3.social_icon.height }}"' %}
                                         {% if module.social_3.social_icon.size_type == 'auto' %}
-                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'style="display: block; max-width: 100%; height: auto;"' %}
                                         {% elif module.social_3.social_icon.size_type == 'auto_custom_max' %}
-                                            {% set sizeAttrs = 'width="{{ module.social_3.social_icon.max_width }}" height="{{ module.social_3.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_3.social_icon.max_width }}" height="{{ module.social_3.social_icon.max_height }}" style="display: block; max-width: 100%; height: auto;"' %}
                                         {% endif %}
                                         <img src="{{ module.social_3.social_icon.src }}" alt="{{ module.social_3.social_icon.alt }}" {{ sizeAttrs }}>
                                     </a>
                                 </td>
                             {% endif %}
                             {% if module.social_4.social_link.url.href and module.social_4.social_icon %}
-                                <td valign="middle">
+                                <td valign="middle" style="padding: 0 4px; background: #000000; margin: 0;">
                                     {% set href = module.social_4.social_link.url.href %}
                                     {% if module.social_4.social_link.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -89,16 +96,16 @@
                                     >
                                         {% set sizeAttrs = 'width="{{ module.social_4.social_icon.width }}" height="{{ module.social_4.social_icon.height }}"' %}
                                         {% if module.social_4.social_icon.size_type == 'auto' %}
-                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'style="display: block; max-width: 100%; height: auto;"' %}
                                         {% elif module.social_4.social_icon.size_type == 'auto_custom_max' %}
-                                            {% set sizeAttrs = 'width="{{ module.social_4.social_icon.max_width }}" height="{{ module.social_4.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_4.social_icon.max_width }}" height="{{ module.social_4.social_icon.max_height }}" style="display: block; max-width: 100%; height: auto;"' %}
                                         {% endif %}
                                         <img src="{{ module.social_4.social_icon.src }}" alt="{{ module.social_4.social_icon.alt }}" {{ sizeAttrs }}>
                                     </a>
                                 </td>
                             {% endif %}
                             {% if module.social_5.social_link.url.href and module.social_5.social_icon %}
-                                <td valign="middle">
+                                <td valign="middle" style="padding: 0 4px; background: #000000; margin: 0;">
                                     {% set href = module.social_5.social_link.url.href %}
                                     {% if module.social_5.social_link.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -109,9 +116,9 @@
                                     >
                                         {% set sizeAttrs = 'width="{{ module.social_5.social_icon.width }}" height="{{ module.social_5.social_icon.height }}"' %}
                                         {% if module.social_5.social_icon.size_type == 'auto' %}
-                                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'style="display: block; max-width: 100%; height: auto;"' %}
                                         {% elif module.social_5.social_icon.size_type == 'auto_custom_max' %}
-                                            {% set sizeAttrs = 'width="{{ module.social_5.social_icon.max_width }}" height="{{ module.social_5.social_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                            {% set sizeAttrs = 'width="{{ module.social_5.social_icon.max_width }}" height="{{ module.social_5.social_icon.max_height }}" style="display: block; max-width: 100%; height: auto;"' %}
                                         {% endif %}
                                         <img src="{{ module.social_5.social_icon.src }}" alt="{{ module.social_5.social_icon.alt }}" {{ sizeAttrs }}>
                                     </a>
@@ -122,5 +129,11 @@
                 </table>
             </td>
         </tr>
+        <!--[if (mso)|(mso 16)]>
+            <tr>
+                <td height="11.25px"></td>
+                <td height="11.25px"></td>
+            </tr>
+        <![endif]-->
     </tbody>
 </table>
