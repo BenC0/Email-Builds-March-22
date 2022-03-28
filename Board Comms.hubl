@@ -12,6 +12,10 @@
     <style type="text/css" id="hs-inline-css">
         /*<![CDATA[*/
         /* everything in this style tag will be inlined onto matching elements */
+        table.content {
+          padding-top: 15px;
+        }
+          
         @media (prefers-color-scheme: dark ) {
             table.content {
                 background: #000000;
@@ -142,7 +146,7 @@
     {% module "content1"
         path="/Global Logic - Emails - March 2022/modules/content"
         label="content1"
-        style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
+        style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px; padding-top: 30px;" } }
         text_alignment = "left"
         cta= {
             cta_link: {

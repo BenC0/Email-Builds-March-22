@@ -1,5 +1,9 @@
-<table class="footer" align="center" width="600" style="background: #ffffff; width: 100%; max-width: 600px; padding: 0;" cellspacing="0">
-    <tbody>
+{% if module.footer_decoration %}
+    <table class="footer" align="center" width="600" style="background: #ffffff; width: 100%; max-width: 600px; padding: 0;" cellspacing="0">
+{% else %}
+    <table class="footer" align="center" width="600" style="background: #414042; width: 100%; max-width: 600px; padding: 0;" cellspacing="0">
+{% endif %}
+        <tbody>
         {% if module.footer_decoration %}
         <tr>
             <td style="padding: 0;">

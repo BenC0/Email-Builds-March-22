@@ -20,7 +20,7 @@
             max-width: 100%;
         }
         ul, p {
-            font-family: Helvetica Neue LT Pro; font-style: normal; font-weight: 400; letter-spacing: -0.09574468433856964px;
+            font-family: Helvetica Neue LT Pro, sans-serif; font-style: normal; font-weight: 400; letter-spacing: -0.09574468433856964px;
         }
         /*]]>*/
     </style>
