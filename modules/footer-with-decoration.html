@@ -123,7 +123,7 @@
                     <tbody>
                         <tr>
                             {% if module.footer_links.footer_link_1.footer_link_url and module.footer_links.footer_link_1.link_text %}
-                                <td>
+                                <td style="color: #ffffff !important;">
                                     {% set href = module.footer_links.footer_link_1.footer_link_url.url.href %}
                                     {% if module.footer_links.footer_link_1.footer_link_url.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -131,13 +131,13 @@
                                     <a href="{{ href }}"
                                         {% if module.footer_links.footer_link_1.footer_link_url.open_in_new_tab %}target="_blank"{% endif %}
                                         {% if module.footer_links.footer_link_1.footer_link_url.rel %}rel="{{ module.footer_links.footer_link_1.footer_link_url.rel }}"{% endif %}
-                                        style="color: #ffffff; text-decoration: none;font-family: Arial; font-size: 9px; font-style: normal; font-weight: 700; line-height: 10px; letter-spacing: -0.1531914919614792px; text-align: center; ">
+                                        style="color: #ffffff !important; text-decoration: none;font-family: Arial; font-size: 9px; font-style: normal; font-weight: 700; line-height: 10px; letter-spacing: -0.1531914919614792px; text-align: center; ">
                                         {{ module.footer_links.footer_link_1.link_text }}
                                     </a>
                                 </td>
                             {% endif %}
                             {% if module.footer_links.footer_link_2.footer_link_url and module.footer_links.footer_link_2.link_text %}
-                                <td>
+                                <td style="color: #ffffff !important;">
                                     {% set href = module.footer_links.footer_link_2.footer_link_url.url.href %}
                                     {% if module.footer_links.footer_link_2.footer_link_url.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -145,13 +145,13 @@
                                     <a href="{{ href }}"
                                         {% if module.footer_links.footer_link_2.footer_link_url.open_in_new_tab %}target="_blank"{% endif %}
                                         {% if module.footer_links.footer_link_2.footer_link_url.rel %}rel="{{ module.footer_links.footer_link_2.footer_link_url.rel }}"{% endif %}
-                                        style="color: #ffffff; text-decoration: none;font-family: Arial; font-size: 9px; font-style: normal; font-weight: 700; line-height: 10px; letter-spacing: -0.1531914919614792px; text-align: center; ">
+                                        style="color: #ffffff !important; text-decoration: none;font-family: Arial; font-size: 9px; font-style: normal; font-weight: 700; line-height: 10px; letter-spacing: -0.1531914919614792px; text-align: center; ">
                                         {{ module.footer_links.footer_link_2.link_text }}
                                     </a>
                                 </td>
                             {% endif %}
                             {% if module.footer_links.footer_link_3.footer_link_url and module.footer_links.footer_link_3.link_text %}
-                                <td>
+                                <td style="color: #ffffff !important;">
                                     {% set href = module.footer_links.footer_link_3.footer_link_url.url.href %}
                                     {% if module.footer_links.footer_link_3.footer_link_url.url.type is equalto "EMAIL_ADDRESS" %}
                                         {% set href = "mailto:" + href %}
@@ -159,7 +159,7 @@
                                     <a href="{{ href }}"
                                         {% if module.footer_links.footer_link_3.footer_link_url.open_in_new_tab %}target="_blank"{% endif %}
                                         {% if module.footer_links.footer_link_3.footer_link_url.rel %}rel="{{ module.footer_links.footer_link_3.footer_link_url.rel }}"{% endif %}
-                                        style="color: #ffffff; text-decoration: none;font-family: Arial; font-size: 9px; font-style: normal; font-weight: 700; line-height: 10px; letter-spacing: -0.1531914919614792px; text-align: center; ">
+                                        style="color: #ffffff !important; text-decoration: none;font-family: Arial; font-size: 9px; font-style: normal; font-weight: 700; line-height: 10px; letter-spacing: -0.1531914919614792px; text-align: center; ">
                                         {{ module.footer_links.footer_link_3.link_text }}
                                     </a>
                                 </td>
@@ -170,11 +170,11 @@
             </td>
         </tr>
         <tr>
-            <td style="background: #414042; padding: 0 62px 13px;">
+            <td style="background: #414042; padding: 0 62px 13px;" align="center">
                 <table align="center">
                     <tbody>
                         <tr>
-                            <td>
+                            <td align="center" style="color: #ffffff !important;">
                                 {% if module.footer_links.footer_link_4.footer_link_url and module.footer_links.footer_link_4.link_text %}
                                     {% set href = module.footer_links.footer_link_4.footer_link_url.url.href %}
                                     {% if module.footer_links.footer_link_4.footer_link_url.url.type is equalto "EMAIL_ADDRESS" %}
@@ -183,7 +183,7 @@
                                     <a href="{{ href }}"
                                         {% if module.footer_links.footer_link_4.footer_link_url.open_in_new_tab %}target="_blank"{% endif %}
                                         {% if module.footer_links.footer_link_4.footer_link_url.rel %}rel="{{ module.footer_links.footer_link_4.footer_link_url.rel }}"{% endif %}
-                                        style="color: #ffffff; text-decoration: none; font-family: Arial; font-size: 9px; font-style: normal; font-weight: 400; line-height: 40px; letter-spacing: -0.22978723049163818px; text-align: center;">
+                                        style="color: #ffffff !important; text-decoration: none; font-family: Arial; font-size: 9px; font-style: normal; font-weight: 400; line-height: 40px; letter-spacing: -0.22978723049163818px; text-align: center;">
                                         {{ module.footer_links.footer_link_4.link_text }}
                                     </a>
                                 {% endif %}
