@@ -11,13 +11,25 @@
       /*<![CDATA[*/
       /* everything in this style tag will be inlined onto matching elements */
       body {
+        width: 600px;
         max-width: 600px;
         margin: 0 auto;
       }
       /*]]>*/
+      <!--[if (mso)|(mso 16)]>
+          a {
+              text-decoration: none;
+              color: inherit !important;
+              text-decoration: none !important;
+              font-size: inherit !important;
+              font-family: inherit !important;
+              font-weight: inherit !important;
+              line-height: inherit !important;
+          }
+      <![endif]-->
     </style>
   </head>
-  <body>
+  <body width="600">
     <!-- Preview text (text which appears right after subject in certain email clients) -->
     <div id="preview_text" style="display:none!important">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}</div>
     <!-- View as webpage link -->
@@ -26,7 +38,6 @@
       Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}">here</a>.
     </div>
     {% endif %}
-    <!-- Insert body here -->
     {% module "navigation-with-social-links"
       path="/Global Logic - Emails - March 2022/modules/navigation-with-social-links"
       label="navigation"
@@ -348,21 +359,21 @@
         },
       }
     %}
-    <!-- Office location information and unsubscribe links -->
-    <p id="footer" style="display: none !important;">
-      {{ site_settings.company_name }}&nbsp;
-      {{ site_settings.company_street_address_1 }}&nbsp;
-      {{ site_settings.company_street_address_2 }}&nbsp;
-      {{ site_settings.company_city }}&nbsp;
-      {{ site_settings.company_state }}&nbsp;
-      {{ site_settings.company_zip }}&nbsp;
-      {{ site_settings.company_country }}&nbsp;
-      <br/>
-      You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
-      <br/>
-      Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
-      <br/>
-      <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
-    </p>
-  </body>
+      <!-- Office location information and unsubscribe links -->
+      <p id="footer" style="display: none !important;">
+        {{ site_settings.company_name }}&nbsp;
+        {{ site_settings.company_street_address_1 }}&nbsp;
+        {{ site_settings.company_street_address_2 }}&nbsp;
+        {{ site_settings.company_city }}&nbsp;
+        {{ site_settings.company_state }}&nbsp;
+        {{ site_settings.company_zip }}&nbsp;
+        {{ site_settings.company_country }}&nbsp;
+        <br/>
+        You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+        <br/>
+        Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+        <br/>
+        <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
+      </p>
+    </body>
 </html>
