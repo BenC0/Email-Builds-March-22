@@ -2,7 +2,7 @@
     <tbody>
         {% if module.image_field.src %}
             <tr>
-                <td style="padding: 0 0 5px;">
+                <td style="padding: 0 0 5px; text-align: {{ module.text_alignment }};" align="{{ module.text_alignment }}">
                     {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
                     {% if module.image_field.size_type == 'auto' %}
                         {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
