@@ -29,17 +29,24 @@
         {% if module.cta.cta_link and module.cta.cta_text %}
             <tr>
                 <td style="padding: 0;" align="{{ module.cta.cta_alignment }}">
-                    {% set href = module.cta.cta_link.url.href %}
-                    {% if module.cta.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
-                        {% set href = "mailto:" + href %}
-                    {% endif %}
-                    <a href="{{ href }}"
-                        {% if module.cta.cta_link.open_in_new_tab %}target="_blank"{% endif %}
-                        {% if module.cta.cta_link.rel %}rel="{{ module.cta.cta_link.rel }}"{% endif %}
-                        class="cta"
-                        style="font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; color: #ffffff; text-decoration: none; padding: 12px 57px; display: inline-block;">
-                        {{ module.cta.cta_text }}
-                    </a>
+                    <!--[if (mso)|(mso 16)]>
+                        <table align="{{ module.cta.cta_alignment }}" style="font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; color: #ffffff; text-decoration: none !important; padding: 12px 57px;"><tbody><tr><td style="text-decoration: none;">
+                    <![endif]-->
+                        {% set href = module.cta.cta_link.url.href %}
+                        {% if module.cta.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+                            {% set href = "mailto:" + href %}
+                        {% endif %}
+                        <a href="{{ href }}"
+                            {% if module.cta.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+                            {% if module.cta.cta_link.rel %}rel="{{ module.cta.cta_link.rel }}"{% endif %}
+                            class="cta"
+                            style="font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; text-underline-color: #F37037; text-decoration-color: #F37037; -webkit-text-decoration-color: #F37037; color: #ffffff; text-decoration: none; padding: 12px 57px; display: inline-block;"
+                        >
+                            <span style="text-decoration: none; color: #ffffff; -webkit-text-decoration-color: #F37037; text-underline-color: #F37037; text-decoration-color: #F37037; ">{{ module.cta.cta_text }}</span>
+                        </a>
+                    <!--[if (mso)|(mso 16)]>
+                        </td></tr></tbody></table>
+                    <![endif]-->
                 </td>
             </tr>
         {% endif %}
