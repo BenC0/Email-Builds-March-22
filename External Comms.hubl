@@ -35,90 +35,98 @@
     </div>
     {% endif %}
     <!-- Insert body here -->
-    {% module "navigation"
-        path="/Global Logic - Emails - March 2022/modules/navigation"
-        label="navigation"
-    %}
-    {% module "headline"
-        path="/Global Logic - Emails - March 2022/modules/headline"
-        label="headline"
-    %}
-    {% module "content1"
-        path="/Global Logic - Emails - March 2022/modules/content"
-        label="content1"
-        style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
-        text_alignment = "left"
-        cta= {
-            cta_link: {
-                url: {
-                    href: "https://example.test",
-                    type: "EXTERNAL",
-                    open_in_new_tab: true,
-                }
-            },
-            cta_text: "CTA text",
-            cta_alignment: "left"
-        }
-        heading='Hello there,'
-        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    %}
-    <table><tbody><tr><td height="30px"></td></tr></tbody></table>
-    {% module "image"
-        path="/Global Logic - Emails - March 2022/modules/image"
-        label="image"
-    %}
-    {% module "headline"
-        path="/Global Logic - Emails - March 2022/modules/headline"
-        label="headline"
-        style="style2"
-    %}
-    {% module "content2"
-        path="/Global Logic - Emails - March 2022/modules/content"
-        label="content2"
-        style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
-        text_alignment = "left"
-        cta= {
-            cta_link: {
-                url: {
-                    href: "https://example.test",
-                    type: "EXTERNAL",
-                    open_in_new_tab: true,
-                }
-            },
-            cta_text: "CTA text",
-            cta_alignment: "left"
-        }
-        heading='Hello there,'
-        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p><ul> <li>Lorem ipsum dolor sit amet</li> <li>Quis nostrud exercitation ullamco laboris nisi</li> <li>Excepteur sint occaecat cupidatat non proident</li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    %}
-    <table><tbody><tr><td height="30px"></td></tr></tbody></table>
-    {% module "external-call-out-box"
-        path="/Global Logic - Emails - March 2022/modules/external-call-out-box"
-        label="external-call-out-box"
-    %}
-    {% module "cta-banner"
-        path="/Global Logic - Emails - March 2022/modules/cta-banner"
-        label="cta-banner"
-    %}
-    {% module "external-footer"
-        path="/Global Logic - Emails - March 2022/modules/external-footer"
-        label="external-footer"
-    %}
-    <!-- Office location information and unsubscribe links -->
-    <p id="footer" style="display: none !important;">
-      {{ site_settings.company_name }}&nbsp;
-      {{ site_settings.company_street_address_1 }}&nbsp;
-      {{ site_settings.company_street_address_2 }}&nbsp;
-      {{ site_settings.company_city }}&nbsp;
-      {{ site_settings.company_state }}&nbsp;
-      {{ site_settings.company_zip }}&nbsp;
-      {{ site_settings.company_country }}&nbsp;
-      <br/>
-      You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
-      <br/>
-      Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
-      <br/>
-      <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
-    </p>
+    <!--[if (mso)|(mso 16)]>
+      <table width="100%" style="margin:0 auto"><tbody><tr><td></td><td width="600">
+    <![endif]-->
+        {% module "navigation"
+            path="/Global Logic - Emails - March 2022/modules/navigation"
+            label="navigation"
+        %}
+        {% module "headline"
+            path="/Global Logic - Emails - March 2022/modules/headline"
+            label="headline"
+        %}
+        {% module "content1"
+            path="/Global Logic - Emails - March 2022/modules/content"
+            label="content1"
+            style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
+            text_alignment = "left"
+            cta= {
+                cta_link: {
+                    url: {
+                        href: "https://example.test",
+                        type: "EXTERNAL",
+                        open_in_new_tab: true,
+                    }
+                },
+                cta_text: "CTA text",
+                cta_alignment: "left"
+            }
+            heading='Hello there,'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        %}
+        <table><tbody><tr><td height="30px"></td></tr></tbody></table>
+        {% module "image"
+            path="/Global Logic - Emails - March 2022/modules/image"
+            label="image"
+        %}
+        {% module "headline"
+            path="/Global Logic - Emails - March 2022/modules/headline"
+            label="headline"
+            style="style2"
+        %}
+        {% module "content2"
+            path="/Global Logic - Emails - March 2022/modules/content"
+            label="content2"
+            style = { outer_spacing: { css: "padding-left: 50px; padding-right: 50px;" } }
+            text_alignment = "left"
+            cta= {
+                cta_link: {
+                    url: {
+                        href: "https://example.test",
+                        type: "EXTERNAL",
+                        open_in_new_tab: true,
+                    }
+                },
+                cta_text: "CTA text",
+                cta_alignment: "left"
+            }
+            heading='Hello there,'
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p><ul> <li>Lorem ipsum dolor sit amet</li> <li>Quis nostrud exercitation ullamco laboris nisi</li> <li>Excepteur sint occaecat cupidatat non proident</li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        %}
+        <table><tbody><tr><td height="30px"></td></tr></tbody></table>
+        {% module "external-call-out-box"
+            path="/Global Logic - Emails - March 2022/modules/external-call-out-box"
+            label="external-call-out-box"
+        %}
+        {% module "cta-banner"
+            path="/Global Logic - Emails - March 2022/modules/cta-banner"
+            label="cta-banner"
+        %}
+        {% module "external-footer"
+            path="/Global Logic - Emails - March 2022/modules/external-footer"
+            label="external-footer"
+        %}
+        <table style="display: none !important;"> <tbody> <tr> <td>
+        <!-- Office location information and unsubscribe links -->
+        <p id="footer" style="display: none !important;">
+            {{ site_settings.company_name }}&nbsp;
+            {{ site_settings.company_street_address_1 }}&nbsp;
+            {{ site_settings.company_street_address_2 }}&nbsp;
+            {{ site_settings.company_city }}&nbsp;
+            {{ site_settings.company_state }}&nbsp;
+            {{ site_settings.company_zip }}&nbsp;
+            {{ site_settings.company_country }}&nbsp;
+            <br/>
+            You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}.
+            <br/>
+            Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}">email preferences</a> to choose the types of emails you receive.
+            <br/>
+            <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}">Unsubscribe from all future emails</a>
+        </p>
+        </td> </tr> </tbody> </table>
+    <!--[if (mso)|(mso 16)]>
+        <td></td></td></tr></tbody></table>
+    <![endif]-->
   </body>
 </html>
