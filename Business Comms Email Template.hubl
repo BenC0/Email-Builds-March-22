@@ -26,6 +26,11 @@
               font-weight: inherit !important;
               line-height: inherit !important;
           }
+          table {
+            border-spacing: 0;
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+          }
       <![endif]-->
     </style>
   </head>
