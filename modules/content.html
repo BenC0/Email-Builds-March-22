@@ -1,18 +1,11 @@
 <table class="content" width="600px" align="center" style="width: 100%; max-width: 600px; {{ module.style.outer_spacing.css }}" cellspacing="0">
     <tbody>
-        <!--[if (mso)|(mso 16)]>
-            <tr>
-                <td mso-line-height-rule: exactly; line-height:20px; font-size:20px;><p>&nbsp;</p></td>
-                <td mso-line-height-rule: exactly; line-height:20px; font-size:20px;><p>&nbsp;</p></td>
-                <td mso-line-height-rule: exactly; line-height:20px; font-size:20px;><p>&nbsp;</p></td>
-            </tr>
+        <!--[if mso]>
+            <tr> <td width="10" style="mso-line-height-rule: exactly; line-height:20px; font-size:20px;"><p>&nbsp;</p></td> </tr>
         <![endif]-->
-        {% if module.image_field.src %}
-            <tr>
-                <!--[if (mso)|(mso 16)]>
-                    <td width="20px"></td>
-                <![endif]-->
-                <td style="padding: 0 0 5px; text-align: {{ module.text_alignment }};" align="{{ module.text_alignment }}">
+        <tr>
+            <td style="padding: 0 0 5px; text-align: {{ module.text_alignment }};" align="{{ module.text_alignment }}">
+                {% if module.image_field.src %}
                     {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
                     {% if module.image_field.size_type == 'auto' %}
                         {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
@@ -21,35 +14,25 @@
                     {% endif %}
                     {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
                     <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-                </td>
-                <!--[if (mso)|(mso 16)]>
-                    <td width="20px"></td>
-                <![endif]-->
-            </tr>
-        {% endif %}
-        {% if module.heading or module.text %}
-        <tr>
-            <!--[if (mso)|(mso 16)]>
-                <td width="20px"></td>
-            <![endif]-->
-            <td style="padding: 0 0 5px;">
-                {% if module.heading %}
-                    <p class="headline" style="font-family: Arial; font-size: 24px !important; font-style: normal; font-weight: 700; line-height: 28px; letter-spacing: -0.1531914919614792px; text-align: {{ module.text_alignment }};">{{ module.heading }}</p>
-                {% endif %}
-                {% if module.text %}
-                    <p style="font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -0.09574468433856964px; text-align: {{ module.text_alignment }};">{{ module.text }}</p>
+                {% else %}
+                    <p>&nbsp;</p>
                 {% endif %}
             </td>
-            <!--[if (mso)|(mso 16)]>
-                <td width="20px"></td>
-            <![endif]-->
         </tr>
+        {% if module.heading or module.text %}
+            <tr>
+                <td style="padding: 0 0 5px;">
+                    {% if module.heading %}
+                        <p class="headline" style="width: 100%; font-family: Arial; font-size: 24px !important; font-style: normal; font-weight: 700; line-height: 28px; letter-spacing: -0.1531914919614792px; text-align: {{ module.text_alignment }};">{{ module.heading }}</p>
+                    {% endif %}
+                    {% if module.text %}
+                        <p style="width: 100%; font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 400; line-height: 25px; letter-spacing: -0.09574468433856964px; text-align: {{ module.text_alignment }};">{{ module.text }}</p>
+                    {% endif %}
+                </td>
+            </tr>
         {% endif %}
         {% if module.cta.cta_link and module.cta.cta_text %}
             <tr>
-                <!--[if (mso)|(mso 16)]>
-                    <td width="20px"></td>
-                <![endif]-->
                 <td style="padding: 0;" align="{{ module.cta.cta_alignment }}">
                     <!--[if (mso)|(mso 16)]>
                         <table align="{{ module.cta.cta_alignment }}" style="font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; color: #ffffff; text-decoration: none !important; padding: 12px 57px;"><tbody><tr><td style="text-decoration: none;">
@@ -70,17 +53,10 @@
                         </td></tr></tbody></table>
                     <![endif]-->
                 </td>
-                <!--[if (mso)|(mso 16)]>
-                    <td width="20px"></td>
-                <![endif]-->
             </tr>
         {% endif %}
-        <!--[if (mso)|(mso 16)]>
-            <tr>
-                <td mso-line-height-rule: exactly; line-height:20px; font-size:20px;><p>&nbsp;</p></td>
-                <td mso-line-height-rule: exactly; line-height:20px; font-size:20px;><p>&nbsp;</p></td>
-                <td mso-line-height-rule: exactly; line-height:20px; font-size:20px;><p>&nbsp;</p></td>
-            </tr>
+        <!--[if mso]>
+            <tr> <td width="10" style="mso-line-height-rule: exactly; line-height:20px; font-size:20px;"><p>&nbsp;</p></td> </tr>
         <![endif]-->
     </tbody>
 </table>
