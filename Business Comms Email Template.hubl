@@ -15,15 +15,6 @@
         max-width: 600px;
         margin: 0 auto;
       }
-      a {
-          text-decoration: none;
-          color: inherit !important;
-          text-decoration: none !important;
-          font-size: inherit !important;
-          font-family: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-      }
       /*]]>*/
     </style>
     <!--[if mso]>
@@ -143,7 +134,7 @@
           }
         }
         logo = {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/GlobalLogic_Logo.png",
+          src: "https://2661559.fs1.hubspotusercontent-na1.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/GlobalLogic_Logo_Black.png",
           alt: "GlobalLogic - A Hitachi Group Company",
           max_width: "200",
           max_height: "47",

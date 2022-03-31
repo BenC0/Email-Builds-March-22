@@ -61,107 +61,107 @@
       <table width="100%" style="margin:0 auto"><tbody><tr><td></td><td width="600">
     <![endif]-->
       {% module "navigation-with-social-links"
-          path="/Global Logic - Emails - March 2022/modules/navigation-with-social-links"
-          label="navigation"
-          social_1 =  {
+        path="/Global Logic - Emails - March 2022/modules/navigation-with-social-links"
+        label="navigation"
+        social_1 =  {
           social_link: {
-              url: {
+            url: {
               href: "https://linkedin.com/",
               type: "EXTERNAL",
               open_in_new_tab: true,
-              }
+            }
           },
           social_icon: {
-              src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/linkedin-icon.png",
-              alt: "LinkedIn",
-              max_width: "35",
-              max_height: "34",
-              width: "35",
-              height: "34",
-              size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/linkedin-icon.png",
+            alt: "LinkedIn",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
           }
-          }
-          social_2 =  {
+        }
+        social_2 =  {
           social_link: {
-              url: {
+            url: {
               href: "https://facebook.com/",
               type: "EXTERNAL",
               open_in_new_tab: true,
-              }
+            }
           },
           social_icon: {
-              src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/facebook-icon.png",
-              alt: "facebook",
-              max_width: "35",
-              max_height: "34",
-              width: "35",
-              height: "34",
-              size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/facebook-icon.png",
+            alt: "facebook",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
           }
-          }
-          social_3 =  {
+        }
+        social_3 =  {
           social_link: {
-              url: {
+            url: {
               href: "https://twitter.com/",
               type: "EXTERNAL",
               open_in_new_tab: true,
-              }
+            }
           },
           social_icon: {
-              src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/twitter-icon.png",
-              alt: "twitter",
-              max_width: "35",
-              max_height: "34",
-              width: "35",
-              height: "34",
-              size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/twitter-icon.png",
+            alt: "twitter",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
           }
-          }
-          social_4 =  {
+        }
+        social_4 =  {
           social_link: {
-              url: {
+            url: {
               href: "https://youtube.com/",
               type: "EXTERNAL",
               open_in_new_tab: true,
-              }
+            }
           },
           social_icon: {
-              src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/youtube-icon.png",
-              alt: "youtube",
-              max_width: "35",
-              max_height: "34",
-              width: "35",
-              height: "34",
-              size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/youtube-icon.png",
+            alt: "youtube",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
           }
-          }
-          social_5 =  {
+        }
+        social_5 =  {
           social_link: {
-              url: {
+            url: {
               href: "https://instagram.com/",
               type: "EXTERNAL",
               open_in_new_tab: true,
-              }
+            }
           },
           social_icon: {
-              src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/instagram-icon.png",
-              alt: "instagram",
-              max_width: "35",
-              max_height: "34",
-              width: "35",
-              height: "34",
-              size_type: 'auto_custom_max',
+            src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/instagram-icon.png",
+            alt: "instagram",
+            max_width: "35",
+            max_height: "34",
+            width: "35",
+            height: "34",
+            size_type: 'auto_custom_max',
           }
-          }
-          logo = {
-          src: "https://fs.hubspotusercontent00.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/GlobalLogic_Logo.png",
+        }
+        logo = {
+          src: "https://2661559.fs1.hubspotusercontent-na1.net/hubfs/2661559/Global%20Logic%20-%20Emails%20-%20March%202022/GlobalLogic_Logo_Black.png",
           alt: "GlobalLogic - A Hitachi Group Company",
           max_width: "200",
           max_height: "47",
           width: "200",
           height: "47",
           size_type: 'auto_custom_max',
-          }
+        }
       %}
       {% module "content1"
           path="/Global Logic - Emails - March 2022/modules/content"
