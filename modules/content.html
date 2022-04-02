@@ -1,7 +1,7 @@
 <table class="content" width="600px" align="center" style="width: 100%; max-width: 600px; {{ module.style.outer_spacing.css }}" cellspacing="0">
     <tbody>
         <!--[if mso]>
-            <tr> <td width="10" style="mso-line-height-rule: exactly; line-height:20px; font-size:20px;"><p>&nbsp;</p></td> </tr>
+            <tr> <td width="10" style="mso-line-height-rule: exactly; line-height:10px; font-size:10px;"><p>&nbsp;</p></td> </tr>
         <![endif]-->
         <tr>
             <td style="padding: 0 0 5px; text-align: {{ module.text_alignment }};" align="{{ module.text_alignment }}">
@@ -14,8 +14,6 @@
                     {% endif %}
                     {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
                     <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-                {% else %}
-                    <p>&nbsp;</p>
                 {% endif %}
             </td>
         </tr>
@@ -33,7 +31,7 @@
         {% endif %}
         {% if module.cta.cta_link and module.cta.cta_text %}
             <tr>
-                <td style="padding: 0;" align="{{ module.cta.cta_alignment }}">
+                <td style="padding: 0 0 10px;" align="{{ module.cta.cta_alignment }}">
                     <!--[if (mso)|(mso 16)]>
                         <table align="{{ module.cta.cta_alignment }}" style="font-family: Arial; font-size: 16px !important; font-style: normal; font-weight: 700; line-height: 18px; letter-spacing: -0.09574468433856964px; text-align: center; background: #F37037; color: #ffffff; text-decoration: none !important; padding: 12px 57px;"><tbody><tr><td style="text-decoration: none;">
                     <![endif]-->
