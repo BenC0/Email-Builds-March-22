@@ -116,45 +116,39 @@
                 <p style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 16px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important; color: #ffffff !important;">GlobalLogic</p>
                 <p style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 16px !important; font-style: normal !important; font-weight: 400 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important;margin: 2px 0 !important;">London Head Office</p>
                 <p style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 400 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important;margin: 0 !important;">Level 7, 2 More London Riverside, London, SE1 2AP</p>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                {% set href = module.link_1.link_field.url.href %}
-                {% if module.link_1.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-                    {% set href = "mailto:" + href %}
-                {% endif %}
-                <a href="{{ href }}"
-                    {% if module.link_1.link_field.open_in_new_tab %}target="_blank"{% endif %}
-                    {% if module.link_1.link_field.rel %}rel="{{ module.link_1.link_field.rel }}"{% endif %}
-                    style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important; text-align: center !important;"
-                >
-                    {{ module.link_1.text_field }}
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                <a data-unsubscribe="true" href="{{ unsubscribe_link_all }}"
-                    style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important; text-align: center !important;"
-                >
-                    Unsubscribe
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td align="center">
-                {% set href = module.link_2.link_field.url.href %}
-                {% if module.link_2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-                    {% set href = "mailto:" + href %}
-                {% endif %}
-                <a href="{{ href }}"
-                    {% if module.link_2.link_field.open_in_new_tab %}target="_blank"{% endif %}
-                    {% if module.link_2.link_field.rel %}rel="{{ module.link_2.link_field.rel }}"{% endif %}
-                    style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important; text-align: center !important;"
-                >
-                    {{ module.link_2.text_field }}
-                </a>
+                <p style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 400 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important;margin: 0 !important;">
+                    {% set href = module.link_1.link_field.url.href %}
+                    {% if module.link_1.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a href="{{ href }}"
+                        {% if module.link_1.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                        {% if module.link_1.link_field.rel %}rel="{{ module.link_1.link_field.rel }}"{% endif %}
+                        style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important; text-align: center !important; margin: 0 !important; padding: 0 !important;"
+                    >
+                        <font color="#FFFFFF" style="text-decoration: none!important; font-family: Helvetica Neue LT Pro, Arial, sans-serif;">{{ module.link_1.text_field }}</font>
+                    </a>
+                </p>
+                <p style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 400 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important;margin: 0 !important;">
+                    <a data-unsubscribe="true" href="{{ unsubscribe_link_all }}"
+                        style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important; text-align: center !important; margin: 0 !important; padding: 0 !important;"
+                    >
+                        <font color="#FFFFFF" style="text-decoration: none!important; font-family: Helvetica Neue LT Pro, Arial, sans-serif;">Unsubscribe</font>
+                    </a>
+                </p>
+                <p style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 400 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important;margin: 0 !important;">
+                    {% set href = module.link_2.link_field.url.href %}
+                    {% if module.link_2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a href="{{ href }}"
+                        {% if module.link_2.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                        {% if module.link_2.link_field.rel %}rel="{{ module.link_2.link_field.rel }}"{% endif %}
+                        style="font-family: Helvetica Neue LT Pro, sans-serif !important; font-size: 12px !important; font-style: normal !important; font-weight: 700 !important; line-height: 22px !important; letter-spacing: 0em !important; text-align: center !important;color: #ffffff !important; text-align: center !important; margin: 0 !important; padding: 0 !important;"
+                    >
+                        <font color="#FFFFFF" style="text-decoration: none!important; font-family: Helvetica Neue LT Pro, Arial, sans-serif;">{{ module.link_2.text_field }}</font>
+                    </a>
+                </p>
             </td>
         </tr>
     </tbody>
